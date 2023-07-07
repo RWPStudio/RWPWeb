@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红白阁 - 高素质生电服务器</title>
+    <link rel="icon" href="./icons/icon.png">
+    <link rel="stylesheet" href="./css/installation.css">
+
+</head>
+<body>
+    <div style="margin-top: 0%;">
+        <a href="./index.html"><img src="./icons/back.png" style="height: 20px;width: 20px;"/><h2 style="display: inline;color: black;text-decoration: none;">返回</h2></a>
+    </div>
+    <ul style="list-style-type:none;margin-left: -20px;">
+        <li class="show" id="0"></li>
+    </ul>
+    <script>
+        fetch('./pictures/list.json')
+        .then(function(response)
+        {
+            return response.json();
+        })  
+        .then(function(myjson)
+        {
+            console.log(myjson)
+            for(var i=0;i<Object.keys(myjson).length;i++)
+            {
+                console.log(Object.values(myjson)[i][0]);
+                document.getElementById(i).innerHTML="</li><div id=\"show\"><img src=\""+Object.values(myjson)[i][0]+"\" id=\"pictures\"><h1 align=\"center\" style=\"color : black;\">"+Object.values(myjson)[i][1]+"</h1><p align=\"center\" style=\"color : black;\">"+Object.values(myjson)[i][2]+"</p></div></li></li></li></li><li class=\"show\" id=\""+(i+1)+"\">";
+            }
+        });
+    </script>
+</body>
+</html>

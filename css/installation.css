@@ -1,0 +1,22 @@
+body {
+    background: #983b3b;
+    background: linear-gradient(220deg, #f68a8a, #ff3939) fixed
+}
+.show {
+    display: inline-block;
+}
+#show {
+    background: white;
+    border-radius:10px;
+    width: 384px;
+    height: 384px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+#pictures {
+    border-radius:10px;
+    width: 100%;
+    height: 56.25%;
+}
