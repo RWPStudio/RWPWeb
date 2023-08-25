@@ -1,4 +1,5 @@
-@keyframes fadein {
+@keyframes
+fadein {
     from {
         opacity: 0
     }
@@ -15,7 +16,8 @@
     padding: 0
 }
 
-html,body {
+html,
+body {
     width: 100%;
     height: 100%
 }
@@ -29,13 +31,15 @@ body {
     display: table
 }
 
-h1,h2 {
-    color: #ff3e3efd;
-    fill: #ff3e3efd;
+h1,
+h2 {
+    color: #5a2424;
+    fill: #5a2424;
     font-weight: bold
 }
 
-h1,#intro h2 {
+h1,
+#intro h2 {
     font-size: 1.500em;
     line-height: 1.375em;
     margin: 0 0 0.500em 0
@@ -50,7 +54,8 @@ h2 {
     margin: 2.125em 0 0.750em 0
 }
 
-p,ul {
+p,
+ul {
     margin: 0 0 0.938em 0
 }
 
@@ -71,68 +76,126 @@ strong {
 }
 
 a {
-    color: #a32e00;
+    color: #a30000;
     font-weight: bold;
     text-decoration: none
 }
 
-a:hover,a:focus {
-    color: #cc9d4c
+a:hover,
+a:focus {
+    color: #cc4c4c
 }
 
-.show-mobile,#intro input,#show-desktop-downloads-button,#footer-links-toggle,#mobile-links {
+
+.show-mobile,
+#intro input,
+#show-desktop-downloads-button,
+#footer-links-toggle,
+#mobile-links {
     display: none
 }
 
-#intro-body,#main-body,#news-body,#banner-body {
+#intro-body,
+#main-body,
+#news-body,
+#banner-body {
     animation: fadein .7s
 }
 
-#intro h1,#intro h2,#navigation a,.button,#download-footer,#download-footer a:hover,#download-footer a:focus,#show-desktop-downloads-button:hover,#show-desktop-downloads-button:focus,#pagination a,#pagination span,#footer a,#mobile-links label,button {
+#intro h1,
+#intro h2,
+#navigation a,
+.button,
+#download-footer,
+#download-footer a:hover,
+#download-footer a:focus,
+#show-desktop-downloads-button:hover,
+#show-desktop-downloads-button:focus,
+#pagination a,
+#pagination span,
+#footer a,
+#mobile-links label,
+button {
     color: #F4F7F6;
     fill: #F4F7F6;
-    text-shadow: 0 0.063em 0.063em rgba(0,0,0,0.15)
+    text-shadow: 0 0.063em 0.063em rgba(0, 0, 0, 0.15)
 }
 
-#navigation .active,#navigation a:hover,#navigation a:focus,#download-footer a,#show-desktop-downloads-button,#footer .active,#footer a:hover,#footer a:focus,#mobile-links label:hover,#mobile-links label:focus {
+#navigation .active,
+#navigation a:hover,
+#navigation a:focus,
+#download-footer a,
+#show-desktop-downloads-button,
+#footer .active,
+#footer a:hover,
+#footer a:focus,
+#mobile-links label:hover,
+#mobile-links label:focus {
     color: #e0b1b1;
     fill: #e0b1b1
 }
 
-h1 span,svg,#navigation span,#show-desktop-downloads-button span,.status span,.status img {
+h1 span,
+svg,
+#navigation span,
+#show-desktop-downloads-button span,
+.status span,
+.status img {
     vertical-align: middle
 }
 
-ul,p,#banner,.post span,input {
+ul,
+p,
+#banner,
+.post span,
+input {
     line-height: 1.625em
 }
 
-#post-footer span,#download-footer span {
+#post-footer span,
+#download-footer span {
     margin: 0 0.750em
 }
 
-#pagination a span,#media-links span {
+#pagination a span,
+#media-links span {
     position: absolute;
     left: -999em
 }
 
-.button,#pagination a,#pagination span,button,input {
+.button,
+#pagination a,
+#pagination span,
+button,
+input {
     border-radius: 5em;
-    box-shadow: 0 0.125em 0.125em rgba(0,0,0,0.15);
+    box-shadow: 0 0.125em 0.125em rgba(0, 0, 0, 0.15);
     display: inline-block
 }
 
-#navigation,.button,#pagination a,#pagination span,#footer,button {
-    background: #ff3e3efd
+#navigation,
+.button,
+#pagination a,
+#pagination span,
+#footer,
+button {
+    background: #ff3939
 }
 
-.button:hover,.button:focus,#pagination a:hover,#pagination a:focus,button:hover,button:focus {
-    background: #ff3e3efd;
+.button:hover,
+.button:focus,
+#pagination a:hover,
+#pagination a:focus,
+button:hover,
+button:focus {
+    background: #682a2a;
     color: #F4F7F6
 }
 
-.button:focus,button:focus,#pagination a:focus {
-    box-shadow: inset 0 0 1px 0.15em rgba(0,0,0,0.25),0 0.125em 0.125em rgba(0,0,0,0.15);
+.button:focus,
+button:focus,
+#pagination a:focus {
+    box-shadow: inset 0 0 1px 0.15em rgba(0, 0, 0, 0.25), 0 0.125em 0.125em rgba(0, 0, 0, 0.15);
     outline: none
 }
 
@@ -157,7 +220,7 @@ ul,p,#banner,.post span,input {
 
 #navigation {
     background: linear-gradient(200deg, #f68a8a, #ff3939);
-    box-shadow: 0 0.188em 0.375em rgba(0,0,0,0.1);
+    box-shadow: 0 0.188em 0.375em rgba(0, 0, 0, 0.1);
     display: table-row;
     font-weight: bold;
     line-height: 3.750em
@@ -191,18 +254,22 @@ ul,p,#banner,.post span,input {
     margin: 0 0.875em 0 0
 }
 
-#intro,#main {
+#intro,
+#main {
     display: table-row;
     height: 100%
 }
 
-#intro-body,#main-body,#news-body {
+#intro-body,
+#main-body,
+#news-body {
     display: table-cell;
     padding: 5%;
     vertical-align: middle
 }
 
-#intro-body,#inner-wide {
+#intro-body,
+#inner-wide {
     text-align: center
 }
 
@@ -227,14 +294,15 @@ ul,p,#banner,.post span,input {
     margin: 0.938em 0 0 0
 }
 
-#desktop-downloads,#mobile-downloads {
+#desktop-downloads,
+#mobile-downloads {
     display: inline-block
 }
 
 .downloadbutton {
     background: #F4F7F6;
     border-radius: 0.313em;
-    box-shadow: 0 0.125em 0.125em rgba(0,0,0,0.15);
+    box-shadow: 0 0.125em 0.125em rgba(0, 0, 0, 0.15);
     display: inline-block;
     font-size: 1.125em;
     cursor: pointer;
@@ -246,17 +314,22 @@ ul,p,#banner,.post span,input {
     transition-delay: 0.12s
 }
 
-.downloadbutton,.downloadbutton>.downloadmenu>a {
-    color: #ff4848;
-    fill: #ff7575
+.downloadbutton,
+.downloadbutton>.downloadmenu>a {
+    color: #ff3939;
+    fill: #ff3939
 }
 
-.downloadbutton:hover,.downloadbutton:focus,.downloadbutton>.downloadmenu>a:hover,.downloadbutton>.downloadmenu>a:focus {
-    color: #ff4848;
-    fill: #ff7575
+.downloadbutton:hover,
+.downloadbutton:focus,
+.downloadbutton>.downloadmenu>a:hover,
+.downloadbutton>.downloadmenu>a:focus {
+    color: #ff3939;
+    fill: #ff3939
 }
 
-.downloadbutton:hover,.downloadbutton:focus {
+.downloadbutton:hover,
+.downloadbutton:focus {
     background: #fff;
     transition: 0s background
 }
@@ -266,7 +339,8 @@ ul,p,#banner,.post span,input {
     transition: 0s background
 }
 
-label.downloadbutton:hover,label.downloadbutton:focus {
+label.downloadbutton:hover,
+label.downloadbutton:focus {
     border-radius: 0.313em 0.313em 0 0
 }
 
@@ -274,7 +348,8 @@ label.downloadbutton:focus-within {
     border-radius: 0.313em 0.313em 0 0
 }
 
-.downloadbutton:hover>.downloadmenu,.downloadbutton:focus>.downloadmenu {
+.downloadbutton:hover>.downloadmenu,
+.downloadbutton:focus>.downloadmenu {
     max-height: 11.000em
 }
 
@@ -290,7 +365,7 @@ label.downloadbutton:focus-within {
 .downloadbutton>.downloadmenu {
     background: #fff;
     border-radius: 0 0 0.313em 0.313em;
-    box-shadow: 0 0.125em 0.063em rgba(0,0,0,0.15);
+    box-shadow: 0 0.125em 0.063em rgba(0, 0, 0, 0.15);
     display: block;
     max-height: 0;
     overflow: hidden;
@@ -305,7 +380,8 @@ label.downloadbutton:focus-within {
     line-height: 2.625em
 }
 
-.downloadbutton>.downloadmenu>a:last-child:hover,.downloadbutton>.downloadmenu>a:last-child:focus {
+.downloadbutton>.downloadmenu>a:last-child:hover,
+.downloadbutton>.downloadmenu>a:last-child:focus {
     border-radius: 0 0 0.313em 0.313em
 }
 
@@ -315,7 +391,7 @@ label.downloadbutton:focus-within {
 }
 
 #banner {
-    background: rgba(0,0,0,0.15);
+    background: rgba(0, 0, 0, 0.15);
     color: #C8D6D1;
     fill: #C8D6D1;
     font-size: 0.938em;
@@ -372,7 +448,7 @@ label.downloadbutton:focus-within {
 
 #footer {
     background: linear-gradient(220deg, #f68a8a, #ff3939);
-    box-shadow: 0 -0.188em 0.375em rgba(0,0,0,0.1);
+    box-shadow: 0 -0.188em 0.375em rgba(0, 0, 0, 0.1);
     display: table-row;
     font-weight: bold;
     line-height: 3.375em
@@ -390,7 +466,8 @@ label.downloadbutton:focus-within {
     margin: 0 0.188em
 }
 
-button,input {
+button,
+input {
     height: 2.625em;
     line-height: 2.625em;
     padding: 0 1.188em;
@@ -404,7 +481,7 @@ input {
 }
 
 input:focus {
-    box-shadow: 0 1px 0.125em 0.1em rgba(255, 90, 90, 0.35);
+    box-shadow: 0 1px 0.125em 0.1em rgba(0, 122, 163, 0.35);
     outline: none
 }
 
@@ -422,7 +499,7 @@ button {
 
 @media (max-width: 60em) {
     body {
-        padding:0 0 3.750em 0
+        padding: 0 0 3.750em 0
     }
 
     .show-mobile {
@@ -432,8 +509,7 @@ button {
     #navigation {
         text-align: center;
         top: 0;
-        width: 100%;
-        height: 1.313em
+        width: 100%
     }
 
     #logo a {
@@ -480,17 +556,21 @@ button {
         margin: 0 auto
     }
 
-    #footer-links,#media-links {
+    #footer-links,
+    #media-links {
         margin: 0
     }
 
-    #media-links,#mobile-links {
+    #media-links,
+    #mobile-links {
         display: table;
         table-layout: fixed;
         width: 100%
     }
 
-    #media-links a,#mobile-links a,#mobile-links label {
+    #media-links a,
+    #mobile-links a,
+    #mobile-links label {
         cursor: pointer;
         display: table-cell;
         text-align: center
@@ -515,7 +595,8 @@ button {
         width: 100%
     }
 
-    #desktop-downloads,#download-footer {
+    #desktop-downloads,
+    #download-footer {
         float: left;
         margin: 0;
         max-height: 0;
@@ -534,7 +615,8 @@ button {
         width: 50%
     }
 
-    label.downloadbutton:hover,label.downloadbutton:focus {
+    label.downloadbutton:hover,
+    label.downloadbutton:focus {
         border-radius: 0.313em
     }
 
@@ -552,7 +634,8 @@ button {
         background: none
     }
 
-    .downloadbutton:hover>.downloadmenu,.downloadbutton:focus>.downloadmenu {
+    .downloadbutton:hover>.downloadmenu,
+    .downloadbutton:focus>.downloadmenu {
         max-height: 0
     }
 
@@ -569,7 +652,7 @@ button {
         display: inline-block;
         font-size: 1.125em;
         font-weight: bold;
-        text-shadow: 0 0.063em 0.063em rgba(0,0,0,0.15)
+        text-shadow: 0 0.063em 0.063em rgba(0, 0, 0, 0.15)
     }
 
     #show-desktop-downloads-button svg {
@@ -587,7 +670,8 @@ button {
         visibility: visible
     }
 
-    #show-desktop-downloads-button #hide,#show-desktop-downloads:checked+div #show-desktop-downloads-button #more {
+    #show-desktop-downloads-button #hide,
+    #show-desktop-downloads:checked+div #show-desktop-downloads-button #more {
         display: none
     }
 
@@ -602,18 +686,38 @@ button {
         padding: 0
     }
 
-    body,h1,h2,#logo a,#banner,#pagination span,input {
+    body,
+    h1,
+    h2,
+    #logo a,
+    #banner,
+    #pagination span,
+    input {
         color: #000;
         fill: #000
     }
 
-    body,.button,.downloadbutton,#banner,#pagination a,#pagination span,button,input {
+    body,
+    .button,
+    .downloadbutton,
+    #banner,
+    #pagination a,
+    #pagination span,
+    button,
+    input {
         background: none
     }
 
-    a,#download-footer a,#post-footer a,.post a,.button,.downloadbutton,#pagination a,button {
-        color: #5098CE;
-        fill: #5098CE;
+    a,
+    #download-footer a,
+    #post-footer a,
+    .post a,
+    .button,
+    .downloadbutton,
+    #pagination a,
+    button {
+        color: #ce5050;
+        fill: #ce5050;
         text-decoration: underline
     }
 
@@ -622,7 +726,8 @@ button {
         font-size: 80%
     }
 
-    #navigation-links,#footer {
+    #navigation-links,
+    #footer {
         display: none
     }
 
@@ -637,11 +742,14 @@ button {
         margin: 0
     }
 
-    #intro-body,#main-body,#news-body {
+    #intro-body,
+    #main-body,
+    #news-body {
         padding: 0
     }
 
-    #main-body,#news-body {
+    #main-body,
+    #news-body {
         text-align: justify
     }
 
@@ -654,43 +762,17 @@ button {
         padding: 0
     }
 
-    .button,.downloadbutton,#pagination a,button {
-        border: 0.063em solid #5098CE;
+    .button,
+    .downloadbutton,
+    #pagination a,
+    button {
+        border: 0.063em solid #ce5050;
         box-shadow: none
     }
 
-    #pagination span,input {
+    #pagination span,
+    input {
         border: 0.063em solid #000;
         box-shadow: none
-    }
-}
-
-body {
-    background: #983b3b;
-    background: linear-gradient(220deg, #f68a8a, #ff3939) fixed
-}
-
-body,h2 {
-    color: #F4F7F6
-}
-
-#navigation,#footer {
-    background: none;
-    box-shadow: none
-}
-
-@media (max-width: 60em) {
-    #navigation,#footer {
-        background:#712e2e
-    }
-
-    #navigation {
-        background: linear-gradient(200deg, #f68a8a, #ff3939);
-        box-shadow: 0 0.188em 0.375em rgba(0,0,0,0.1)
-    }
-
-    #footer {
-        background: linear-gradient(220deg, #f68a8a, #ff3939);
-        box-shadow: 0 -0.188em 0.375em rgba(0,0,0,0.1)
     }
 }
