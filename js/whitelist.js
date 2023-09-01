@@ -38,6 +38,26 @@ function connect(){
     ws.onmessage = function (evt) {
         var myobj = JSON.parse(evt.data);//转对象
         console.log(myobj);
+        switch(myobj)
+        {
+            case 0:
+                alert("此qq号已被注册")
+                window.location.replace("../whitelist.html")
+            break;
+            case 1:
+                alert("此名字已被注册")
+                window.location.replace("../whitelist.html")
+            break;
+            case 2:
+                alert("注册成功！欢迎来到红白阁服务器")
+                window.location.replace("../index.html")
+            break;
+            case 3:
+                alert("您还未登陆过服务器")
+                window.location.replace("../whitelist.html")
+            break;
+        }
+
     };
 }
 function test(){
