@@ -1,0 +1,50 @@
+@keyframes showicon{
+    from{
+        margin-top: 50%;
+        opacity: 0;
+    }
+    to{
+        margin-top: 0px ;
+        opacity:1;
+    }
+}
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeout{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes fadein_top {
+    from{
+        position: relative;
+        top:-1000px;
+        opacity: 0;
+    }
+    to{
+        position: relative;
+        top: 0;
+        opacity: 1;
+    }  
+}
+@keyframes fadein_buttom {
+    from{
+        position: fixed;
+        bottom:-100%;
+        opacity: 1;
+    }
+    to{
+        position: fixed;
+        bottom: 0;
+        opacity: 0;
+    }  
+}

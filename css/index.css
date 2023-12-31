@@ -1,0 +1,159 @@
+:root {
+    --animation: fadein_top;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 500%;
+    position: absolute;
+    top: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+
+.section1 {
+    background-color: red;
+
+}
+
+.section2 {
+    background-color: skyblue;
+
+}
+
+.section3 {
+    background-color: red;
+
+}
+
+.section4 {
+    background-color: orange;
+
+}
+
+.section5 {
+    background-color: lightgreen;
+
+}
+
+.section6 {
+    background-color: purple;
+
+}
+
+.section {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+
+.controls {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 55px;
+    list-style: none;
+}
+
+.index {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    list-style: none;
+    color: white;
+}
+
+.index li {
+    color: white;
+    margin-bottom: 14px;
+}
+
+.controls li {
+    color: white;
+    width: 7px;
+    height: 7px;
+    border: 2px solid rgba(255, 255, 255, 0.644);
+    border-radius: 50%;
+}
+
+
+.controls li+li {
+    margin-top: 20px;
+}
+
+.controls li.wholeactive {
+    background-color: rgba(255, 255, 255, 0.877);
+}
+
+.transverse-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 0px;
+    overflow: hidden;
+}
+
+.transverse-list li {
+    float: left;
+}
+
+.transverse-list button {
+    margin-right: 2px;
+    border-radius: 15px 15px 0px 0px;
+    padding: 14px 16px;
+}
+
+.aboutus div {
+    display: none;
+}
+
+.aboutus .action {
+    display: block;
+    animation-duration: 2s;
+    animation-name: fadein;
+}
+
+.Vertical-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 0px;
+    overflow: hidden;
+}
+
+.ourproject button {
+    margin-bottom: 2px;
+    border-radius: 0px 15px 15px 0px;
+    padding: 14px 16px;
+}
+
+.ourproject div {
+    display: none;
+}
+
+.ourproject .action {
+    display: inline-block;
+    animation-duration: 2s;
+    animation-name: fadein;
+}
+
+#fade{
+    animation-duration: 2s;
+    animation-name: var(--animation);
+}
