@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>标签页切换示例</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .tab {
+    display: none;
+  }
+  .tab.active {
+    display: block;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    transition: all 0.5s ease;
+  }
+  .box-enter {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  .box-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+</style>
+</head>
+<body>
+
+<div id="tabs">
+  <button onclick="changeTab('tab1')">标签 1</button>
+  <button onclick="changeTab('tab2')">标签 2</button>
+  <button onclick="changeTab('tab3')">标签 3</button>
+</div>
+
+<div id="content">
+  <div id="tab1" class="tab active">
+    <div class="box box-enter box-enter-active">内容 1</div>
+  </div>
+  <div id="tab2" class="tab">
+    <div class="box box-enter">内容 2</div>
+  </div>
+  <div id="tab3" class="tab">
+    <div class="box box-enter">内容 3</div>
+  </div>
+</div>
+
+<script>
+  function changeTab(tabId) {
+    var tabs = document.querySelectorAll('.tab');
+    tabs.forEach(function(tab) {
+      tab.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>

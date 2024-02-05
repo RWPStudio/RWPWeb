@@ -14,6 +14,9 @@
 
 <body>
     <div class="container">
+        <span id="111">
+
+        </span>
         <div class="section section1">
             <div class="1" id="fade">
                 <img class="icon" src="./icons/icon.png">
@@ -77,7 +80,7 @@
         <div class="section section5">
             <div style="background-color: white;border-radius: 10px;">
                 <h1 style="color: black;">像素学院</h1>
-                
+
             </div>
         </div>
         <div class="section section6">
@@ -141,7 +144,9 @@
                         index = lis.length - 1
                     }
                 }
-                container.style.top = -index * viewHeight + 'px'
+                console.log(index)
+                var element=document.getElementById("111")
+                element.innerHTML="<div class=\"section section1\"><div class=\"1\" id=\"fade\"><img class=\"icon\" src=\"./icons/icon.png\"></div>"
                 changeColor(index)
                 setTimeout(function () {
                     flag = true
