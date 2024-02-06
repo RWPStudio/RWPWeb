@@ -10,6 +10,8 @@
     <link rel="icon" href="./icons/icon.png">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/animation.css">
+    <!--    For Extra Pages -->
+    <link rel="stylesheet" href="./css/sec2.css">
 </head>
 
 <body>
@@ -17,11 +19,62 @@
         <div class="section section1" id="sec1">
             <div class="1" id="fade">
                 <img class="icon" src="./icons/icon.png" alt="RedWhite Studio Logo"
-                     style="max-width: 40%; height: auto">
+                     style="max-width: 40%;
+                      border-radius: 10px;
+                      height: auto;
+                      filter: drop-shadow(50px 25px 4px #cd1821);
+                ">
+<!--                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" id="svg_mouse" style="-->
+<!--                    height: 32px;-->
+<!--                    width: auto;-->
+<!--                    position: fixed;-->
+<!--                    bottom: 20px;-->
+<!--                    left: 50%;-->
+<!--                    transform: translateX(-50%);-->
+<!--                    display: flex;-->
+<!--                    justify-content: center;-->
+<!--                    align-items: center;-->
+<!--                    width: 100%;-->
+<!--                ">-->
+<!--                    <path d="M3 5a5 5 0 0 1 10 0v6a5 5 0 0 1-10 0V5zm5.5-1.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 1 0v-2z"/>-->
+<!--                </svg>-->
             </div>
         </div>
 
         <div class="section section2" id="sec2"></div>
+
+        <div class="NavNavigator" style="
+                display: none;
+            " id="RootNavigator">
+            <nav class="navigator">
+                <div class="navigator-branding">
+                    <a href="javascript:void(0);" onclick="return_to_0()" title="按下返回页顶">RedWhite Studio</a>
+                </div>
+                <div class="navigator-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="navigator-menu">
+                    <li class="navigator-menu-item has-submenu">
+                        <a href="#" class="navigator-menu-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="navigator-menu-item">
+                        <a href="#" class="navigator-menu-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="navigator-menu-item">
+                        <a href="#" class="navigator-menu-link">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
         <div class="section section3" id="sec3"></div>
 
@@ -32,7 +85,7 @@
         <div class="section section6" id="sec6"></div>
     </div>
 
-    <ul class="controls">
+    <ul class="controls" id="Sidebar">
         <li class="active"></li>
         <li></li>
         <li></li>
@@ -40,9 +93,9 @@
         <li></li>
         <li></li>
     </ul>
-    <ul class="index">
+    <ul class="index" id="SidebarText">
         <li>
-            <h6 id="page">首页
+            <h6 id="page">首页</h6>
         </li>
         <li>
             <h6 id="page">关于我们</h6>

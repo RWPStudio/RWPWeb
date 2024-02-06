@@ -24,34 +24,8 @@ document.addEventListener('wheel', function (e) {
             }
         }
 
-        function forHistoryAPI(index) {
-            index++;
-            try {
-                let dymanic_content = document.getElementById(`sec${index}`);
-                if (dymanic_content.innerHTML.length === 0) {
-                    loadContent(index, dymanic_content)
-                } else {
-                    console.log("略过重复加载项: ", dymanic_content);
-                }
-            } catch (e) {
-                console.error(e);
-            }
-
-            function loadContent(index, dymanic_content) {
-                if (!(index === 1)) {
-                    console.log("Fetching ", index);
-                    fetch(`part_page/section${index}/sec${index}.html`)
-                        .then(response => response.text())
-                        .then(data => {
-                            dymanic_content.innerHTML = data;
-                        }).catch(err => {
-                        console.error("Cannot Fetch: ", err);
-                    });
-                }
-            }
-        }
-
-        forHistoryAPI(index);
+        frame_switcher(index);
+        leave_p1(index);
 
         container.style.top = -index * viewHeight + "px";
         // 改变颜色
@@ -69,6 +43,7 @@ for (let i = 0; i < lis.length; i++) {
         viewHeight = document.body.clientHeight
         index = i
         changeColor(index)
+        frame_switcher(i)
         container.style.top = -index * viewHeight + 'px'
     }
 }
@@ -81,7 +56,7 @@ function changeColor(index) {
     lis[index].className = 'wholeactive'
 }
 
-function change(text){
+function transverse_list_changer(text){
     console.log(text);
     var c = document.querySelectorAll(".aboutus div");
     for(var i=0;i<c.length;i++){
@@ -98,4 +73,64 @@ function change(text){
 function getURLParams() {
     const url = new URL(window.location.href);
     return new URLSearchParams(url.search);
+}
+
+function frame_switcher(index) {
+    index++;
+
+    try {
+        const nav = document.getElementById("RootNavigator");
+        const sb = document.getElementById("Sidebar");
+        const sbt = document.getElementById("SidebarText");
+        let navst = nav.style;
+        let sbst = sb.style;
+        let sbtst = sbt.style;
+        if (index > 1) {
+            navst.display = "";
+            sbst.display = "none";
+            sbtst.display = "none";
+        } else {
+            navst.display = "none";
+            sbst.display = "";
+            sbtst.display = "";
+        }
+    } catch (e) {
+        console.error("Navigator Rend Err: ", e);
+    }
+
+    try {
+        let dymanic_content = document.getElementById(`sec${index}`);
+        if (dymanic_content.innerHTML.length === 0) {
+            loadContent(index, dymanic_content)
+        } else {
+            console.log("略过重复加载项: ", dymanic_content);
+        }
+    } catch (e) {
+        console.error(e);
+    }
+
+    function loadContent(index, dymanic_content) {
+        if (!(index === 1)) {
+            console.log("Fetching ", index);
+            fetch(`part_page/section${index}/sec${index}.html`)
+                .then(response => response.text())
+                .then(data => {
+                    dymanic_content.innerHTML = data;
+                }).catch(err => {
+                console.error("Cannot Fetch: ", err);
+            });
+        }
+    }
+}
+
+function return_to_0() {
+    index = 0;
+    container.style.top = 0;
+}
+
+function leave_p1(index) {
+    index++;
+    if (index !== 1) {
+
+    }
 }

@@ -1,9 +1,9 @@
 <div class="aboutus 2" >
   <ul class="transverse-list">
-    <li><button onclick="change('Initialheart')">初心</button></li>
-    <li><button onclick="change('target')">目标</button></li>
-    <li><button onclick="change('project')">项目</button></li>
-    <li><button onclick="change('player')">成员</button></li>
+    <li><button onclick="transverse_list_changer('Initialheart')">初心</button></li>
+    <li><button onclick="transverse_list_changer('target')">目标</button></li>
+    <li><button onclick="transverse_list_changer('project')">项目</button></li>
+    <li><button onclick="transverse_list_changer('player')">成员</button></li>
   </ul>
   <div style="background-color: black; " class="action" id="Initialheart">
     <h1>这里是塞初心的地方</h1>
@@ -14,7 +14,8 @@
   <div style="background-color:purple;" id="project">
     <h1>这里是项目</h1>
   </div>
-  <div style="background-color:purple;" id="player">
+  <div id="player" style="background-color:purple;
+                          ">
     <h1>这里是玩家</h1>
   </div>
 </div>

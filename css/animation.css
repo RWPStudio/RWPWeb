@@ -1,10 +1,10 @@
 @keyframes showicon{
-    from{
+    from {
         margin-top: 50%;
         opacity: 0;
     }
-    to{
-        margin-top: 0px ;
+    to {
+        margin-top: 0;
         opacity:1;
     }
 }
