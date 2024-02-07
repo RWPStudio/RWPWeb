@@ -1,0 +1,164 @@
+ul.sec6_extra  {
+    position: relative;
+    transform: translateX(20px) skewY(-15deg);
+}
+
+ul.sec6_extra li  {
+    position: relative;
+    list-style: none;
+    width: 250px;
+    background-color: rgb(13,17,23);
+    padding: 15px;
+    z-index: var(--h);
+    transition: 0.5s;
+    rotate: x;
+}
+
+ul.sec6_extra li:hover  {
+    background: #66afe9;
+    transform: translateX(45px);
+}
+
+ul.sec6_extra li:hover::before  {
+    background: #66afe9;
+}
+
+ul.sec6_extra li:hover::after  {
+    background: #66afe9;
+}
+
+ul.sec6_extra li:before  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background-color: #494949;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+
+ul.sec6_extra li:after  {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: slategray;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+ul.sec6_extra li a  {
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+ul.sec6_extra li:hover a  {
+    color: #fff;
+}
+
+.page_paws {
+    transform: skewY(15deg);
+    text-align: right;
+    word-wrap: break-word;
+
+    filter: drop-shadow(30px 10px 1px #000000);
+}
+
+.split_right {
+    width: 50%;
+    right: 0;
+    flex: 1
+}
+
+.split_left {
+    width: 50%; flex: 1
+}
+
+.sec6_container {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    transition: 0.5s;
+}
+
+input[type="checkbox"].navigator-menu-item {
+    appearance: none;
+    width: 64px;
+    height: 32px;
+    position: relative;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: #777;
+}
+
+input[type="checkbox"].navigator-menu-item:before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: white;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: left cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+}
+
+input[type="checkbox"].navigator-menu-item:after {
+    content: "GS";
+    text-indent: 12px;
+    word-spacing: 4px;
+    display: inline-block;
+    white-space: nowrap;
+    color: white;
+    font: 14px/30px monospace;
+    font-weight: bold;
+}
+
+img.split_right {
+    transform: translateX(260px) translateY(-80px) skewY(15deg);
+    width: 10%;
+    right: 0;
+    flex: 1;
+    height: 10%;
+    transition: 0.5s;
+    position: relative;
+}
+
+@media(max-width: 600px) {
+    .sec6_container {
+        flex-direction: column;
+        transition: 0.5s;
+    }
+
+    .split_left, .split_right {
+        width: 100%;
+        transition: 0.5s;
+    }
+    .page_paws {
+        transform: translateX(25px) translateY(60px) skewY(-15deg);
+        text-align: left;
+        word-wrap: break-word;
+        transition: 0.8s;
+        filter: drop-shadow(10px 30px 1px #000000);
+    }
+    img.split_right {
+        transform: translateX(80px) translateY(80px) skewY(-15deg);
+        width: 10%;
+        right: 0;
+        flex: 1;
+        height: 10%;
+        transition: 0.5s;
+    }
+
+}

@@ -1,43 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页 | RMStudio</title>
     <meta name="theme-color" content="#245A48">
     <meta name="description" content="一个因共同理想聚集而来的小工作室">
-    <link rel="icon" href="./icons/icon.png">
+    <link rel="icon" href="assets/icons/icon.png">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/animation.css">
     <!--    For Extra Pages -->
-    <link rel="stylesheet" href="./css/sec2.css">
+    <link rel="stylesheet" href="css/navigator.css">
+    <link rel="stylesheet" href="./css/sec6.css">
+    <!--    For Google API Font-->
+    <link href='http://fonts.font.im/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.font.im/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+
     <div class="container">
         <div class="section section1" id="sec1">
-            <div class="1" id="fade">
-                <img class="icon" src="./icons/icon.png" alt="RedWhite Studio Logo"
-                     style="max-width: 40%;
-                      border-radius: 10px;
-                      height: auto;
-                      filter: drop-shadow(50px 25px 4px #cd1821);
-                ">
-<!--                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" id="svg_mouse" style="-->
-<!--                    height: 32px;-->
-<!--                    width: auto;-->
-<!--                    position: fixed;-->
-<!--                    bottom: 20px;-->
-<!--                    left: 50%;-->
-<!--                    transform: translateX(-50%);-->
-<!--                    display: flex;-->
-<!--                    justify-content: center;-->
-<!--                    align-items: center;-->
-<!--                    width: 100%;-->
-<!--                ">-->
-<!--                    <path d="M3 5a5 5 0 0 1 10 0v6a5 5 0 0 1-10 0V5zm5.5-1.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 1 0v-2z"/>-->
-<!--                </svg>-->
+            <div class="icon_container" id="fade">
+                <img class="icon" src="assets/icons/icon.png" alt="RedWhite Studio Logo">
+                <h1 class="icon_text">RedWhite Studio</h1>
             </div>
         </div>
 
@@ -67,9 +54,15 @@
                         </a>
                     </li>
                     <li class="navigator-menu-item">
-                        <a href="#" class="navigator-menu-link">
+                        <a href="javascript:void(0);" onclick="navigator_methods_help()" class="navigator-menu-link">
                             <i class="fas fa-question-circle"></i>
                             <span>Help</span>
+                        </a>
+                    </li>
+                    <li class="navigator-menu-item">
+                        <a href="javascript:void(0);" onclick="to_greyscale()" class="navigator-menu-link">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Grayscale</span>
                         </a>
                     </li>
                 </ul>
@@ -113,8 +106,12 @@
             <h6 id="page">加入我们</h6>
         </li>
     </ul>
-    <script src="js/page_switcher.js">
-    </script>
+
+
+    <script src="js/navigator_methods.js"></script>
+    <script src="js/page_switcher.js"></script>
+    <script src="js/strange.js"></script>
+    <script src="js/wip_mode.js"></script>
 </body>
 
 </html>

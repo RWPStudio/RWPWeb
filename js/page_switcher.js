@@ -6,7 +6,12 @@ var c=document.querySelectorAll('icon','aboutus','ourproject')
 var index = 0; //当前索引
 var flag = true; //节流开关
 document.addEventListener('wheel', function (e) {
-    e = e || window.event
+    wheelmove(e || window.event)
+})
+
+changeColor(index);
+
+function wheelmove(e) {
     // 获取整屏的高度
     viewHeight = document.body.clientHeight;
     if (flag) {  //节流阀
@@ -24,18 +29,20 @@ document.addEventListener('wheel', function (e) {
             }
         }
 
-        frame_switcher(index);
+        frame_switcher(index, lis.length);
         leave_p1(index);
 
-        container.style.top = -index * viewHeight + "px";
+        if (!(index===lis.length)) {
+            container.style.top = -index * viewHeight + "px";
+        }
+
         // 改变颜色
         changeColor(index)
         setTimeout(function () {
             flag = true
         }, 500)
     }
-
-})
+}
 
 //绑定点击事件
 for (let i = 0; i < lis.length; i++) {
@@ -43,7 +50,7 @@ for (let i = 0; i < lis.length; i++) {
         viewHeight = document.body.clientHeight
         index = i
         changeColor(index)
-        frame_switcher(i)
+        frame_switcher(index)
         container.style.top = -index * viewHeight + 'px'
     }
 }
@@ -75,7 +82,7 @@ function getURLParams() {
     return new URLSearchParams(url.search);
 }
 
-function frame_switcher(index) {
+function frame_switcher(index, lislen) {
     index++;
 
     try {
@@ -101,7 +108,7 @@ function frame_switcher(index) {
     try {
         let dymanic_content = document.getElementById(`sec${index}`);
         if (dymanic_content.innerHTML.length === 0) {
-            loadContent(index, dymanic_content)
+            loadContent(`part_page/sec${index}.html`, dymanic_content, 'eq')
         } else {
             console.log("略过重复加载项: ", dymanic_content);
         }
@@ -109,10 +116,9 @@ function frame_switcher(index) {
         console.error(e);
     }
 
-    function loadContent(index, dymanic_content) {
+    function loadContent(url, dymanic_content, way) {
         if (!(index === 1)) {
-            console.log("Fetching ", index);
-            fetch(`part_page/section${index}/sec${index}.html`)
+            fetch(url)
                 .then(response => response.text())
                 .then(data => {
                     dymanic_content.innerHTML = data;
@@ -126,6 +132,8 @@ function frame_switcher(index) {
 function return_to_0() {
     index = 0;
     container.style.top = 0;
+    frame_switcher(index);
+    changeColor(index);
 }
 
 function leave_p1(index) {

@@ -12,6 +12,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    font-family: 'Noto Sans', 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -20,7 +21,6 @@ body {
     position: absolute;
     top: 0;
     transition: all 0.7s ease-in-out;
-    overflow: hidden;
 }
 
 
@@ -50,8 +50,16 @@ body {
 }
 
 .section6 {
-    background-color: purple;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(1,4,9);
+    transition: 1s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, sans-serif;
 }
 
 .section {
@@ -153,6 +161,32 @@ body {
     display: inline-block;
     animation-duration: 2s;
     animation-name: fadein;
+}
+
+.icon {
+    max-width: 30%;
+    border-radius: 10px;
+    height: auto;
+    filter: drop-shadow(50px 25px 4px #cd1821);
+    flex: 1;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.icon_text {
+    flex: 1;
+    right: 0;
+    text-align: center;
+    word-wrap: unset;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+}
+
+.icon_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #fade{

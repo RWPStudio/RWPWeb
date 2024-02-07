@@ -12,6 +12,7 @@
     align-items: center;
     padding: 0 20px;
     transition: transform 0.3s ease-in-out;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .navigator-branding {
@@ -28,7 +29,8 @@
 }
 
 .navigator-menu-toggle {
-    display: none;}
+    display: none;
+}
 
 .navigator-menu {
     display: flex;
@@ -60,11 +62,20 @@
     from{
         position: fixed;
         bottom:-100%;
-        opacity: 1;
     }
     to{
         position: fixed;
         bottom: 0;
-        opacity: 0;
+    }
+}
+
+@keyframes fadeout_navigator {
+    from{
+        position: fixed;
+        bottom:-100%;
+    }
+    to{
+        position: fixed;
+        bottom: 0;
     }
 }
